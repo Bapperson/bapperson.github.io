@@ -225,6 +225,8 @@
         if (_solved) {
           //alert("congrats!");
           $('#Solved').show('slow');
+          $('#btnSkipIt').toggle();
+          $('#btnUnSkipIt').toggle();
         }
       }
     }
