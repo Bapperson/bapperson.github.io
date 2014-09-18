@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Bapp Puzz</title>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+  <script src="BappPuzz.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    $(function () {
+      //$("div.puzzle, p").puzzle((500/3));
+      $("#MyPuzz").puzzle((500 / 3));
+    });
+
+    function skipIt() {
+      $('#Solved').toggle('slow');
+      $('#btnSkipIt').toggle();
+      $('#btnUnSkipIt').toggle();
+    }
+  </script>
+</head>
+<body>
+  <h1>Test page</h1>
+  <p>Demo stuff will be below.</p>
+  <p><input type="button" id="btnSkipIt" title="I give up!" value="I give up! Show me the surprise!" onclick="skipIt();" />
+    <input type="button" id="btnUnSkipIt" title="Back to Puzzle" value="A new baby???  Take me back to the puzzle!" onclick="skipIt();" style="display:none;" /></p>
+  <!--<div class="puzzle" style="float:left; margin-right:50px;">
+    <img src="http://www.script-tutorials.com/demos/308/images/cat_face.jpg" width="500" height="500" alt="" />
+  </div>-->
+  <div id="MyPuzz" class="puzzle" style="float:left;">
+    <img src="http://upload.wikimedia.org/wikipedia/commons/9/96/1860_Utah_$10_gold_piece.jpeg" width="500" height="500" alt="" />
+  </div>
+  <div id="msg"></div>
+  <div id="Solved" style="float:left; position:absolute; z-index:9999; display:none;">
+     <img id="solvedImg" src="http://www.script-tutorials.com/demos/308/images/cat_face.jpg" width="500" height="500" alt="" />
+  </div>
+</body>
+</html>
